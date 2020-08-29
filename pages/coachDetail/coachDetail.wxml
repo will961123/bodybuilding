@@ -1,0 +1,75 @@
+<!--pages/coachDetail/coachDetail.wxml-->
+<view class="coachDetailView">
+	<view class="coachInfo bg-white flex align-center justify-between">
+		<image src="{{coachDetail.head}}" mode="aspectFill"></image>
+		<view class="detailInfo">
+			<view class="name">{{coachDetail.name}}</view>
+			<view class="desc flex align-center justify-between">
+				<view style="width:100%">擅长： <text wx:for="{{coachDetail.tag}}" wx:key="index" class="tag ">{{index>=coachDetail.tag.length-1?item:item+'、' }} </text>
+				</view>
+			</view>
+			<view class="num flex ">
+				<image src="/img/coachList_img3.png" mode="aspectFill"></image>
+				<text>5项专业认证</text>
+			</view>
+		</view>
+	</view>
+
+	<view class="section bg-white">
+		<view class="sectionTitle flex align-center justify-between">
+			<text>教练风采</text>
+		</view>
+		<scroll-view class="sv" scroll-x="{{true}}">
+			<view wx:for="{{coachDetail.presence}}" wx:key="index" class="item">
+				<image src="{{item}}" mode="aspectFill" mode="aspectFill"></image>
+			</view>
+		</scroll-view>
+	</view>
+
+	<view class="section bg-white">
+		<view class="sectionTitle flex align-center justify-between">
+			<text>资质认证</text>
+			<!-- <view class="btn text-center">查看全部</view> -->
+		</view>
+		<scroll-view class="sv" scroll-x="{{true}}">
+			<view wx:for="{{coachDetail.qualifications}}" wx:key="index" class="item">
+				<image src="{{item}}" mode="aspectFill" mode="aspectFill"></image>
+			</view>
+		</scroll-view>
+	</view>
+
+	<view class="section bg-white">
+		<view class="sectionTitle flex align-center justify-between">
+			<text>授课门店</text>
+		</view>
+		<view wx:for="{{coachDetail.locationList}}" wx:key="index" class="locationItem flex align-center">
+			<image src="/img/coachDetail_img10.png" mode="aspectFill"></image>
+			<text>{{item}}</text>
+		</view>
+	</view>
+
+	<view class="section bg-white">
+		<view class="sectionTitle flex align-center justify-between">
+			<text>学员评价</text>
+			<view class="btn text-center">共{{coachDetail.evaluateList.length}}条评价</view>
+		</view>
+		<view wx:for="{{coachDetail.evaluateList}}" wx:key="index" class="evaluateItem flex">
+			<image src="{{item.head}}" mode="aspectFill"></image>
+			<view class="evaluateInfo">
+				<view class="flex align-center justify-between">
+					<view>
+						<view class="name">{{item.name}}</view>
+						<view class="flex align-center ">
+							<view class="type">{{item.type}}</view>
+							<image class="start" wx:for="{{5}}" wx:for-item="itm" wx:key="{{index}}" src="{{item.startNum>index?'/img/coachDetail_img3.png':'/img/coachDetail_img2.png'}}" mode="aspectFill"></image>
+							<view class="scores">{{item.scores}}</view>
+						</view>
+					</view>
+					<view class="date">{{item.date}}</view>
+				</view>
+				<view class="text">{{item.text}}</view>
+			</view>
+		</view>
+	</view>
+
+</view>

@@ -1,0 +1,67 @@
+<!--pages/courseDetail/courseDetail.wxml-->
+<view class="courseDetailView">
+	<image class="bg" src="{{courseDetail.bg}}" mode="widthFix"></image>
+	<view class="section s1 bg-white">
+		<view class="s1Top flex align-center justify-between">
+			<view class="flex align-center">
+				<image src="/img/courseDetail_img2.png" mode="aspectFill"></image>
+				<view class="name">{{courseDetail.name}}</view>
+				<view class="time">时长{{courseDetail.time}}分钟</view>
+			</view>
+			<view class="price">
+				<text>￥{{courseDetail.price}}</text>
+				<text class="text-sm">/节</text>
+			</view>
+		</view>
+		<view class="sectionTitle flex align-center justify-between">
+			<text>课程介绍</text>
+		</view>
+		<view class="sectionText">
+			{{courseDetail.desc}}
+		</view>
+	</view>
+
+	<view class="section   bg-white">
+		<view class="sectionTitle flex align-center justify-between">
+			<text>课程效果</text>
+		</view>
+		<view class="sectionText">
+			{{courseDetail.effect}}
+		</view>
+	</view>
+
+	<view class="section   bg-white">
+		<view class="sectionTitle flex align-center justify-between">
+			<text>适应人群</text>
+		</view>
+		<view class="sectionText">
+			{{courseDetail.suitablePerson}}
+		</view>
+	</view>
+
+	<view class="section s4   bg-white">
+		<view class="sectionTitle flex align-center justify-between">
+			<text>预约流程</text>
+		</view>
+		<view class="flex justify-around align-center ">
+			<view wx:for="{{s4List}}" wx:key="index" class="item flex flex-direction align-center justify-center">
+				<image src="{{item.icon}}"></image>
+				<text class="name" >{{item.name}}</text>
+			</view>
+		</view>
+	</view>
+
+	<view class="section  s5  bg-white">
+		<view class="sectionTitle flex align-center justify-between">
+			<text>温馨提示</text>
+		</view>
+		<view class="s5Text {{showMore?'hAuto':''}}">
+			{{courseDetail.tip}}
+		</view>
+		<view bindtap="bindShmoreClick" class="showMpre">{{showMore?'折叠':'展开全部'}}</view>
+		<view class="flex justify-center">
+			<view class="btn cu-btn">立即购买</view>
+		</view>
+	</view>
+
+</view>

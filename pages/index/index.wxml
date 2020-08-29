@@ -1,0 +1,117 @@
+<!--index.wxml-->
+<view class="indexView">
+	<view class="locationBox">
+		<view class="label">健身</view>
+		<view class="flex align-end">
+			<text class="cuIcon-location"></text>
+			<view class="flex align-center">
+				<text class="cityName">无锡</text>
+				<text class="cuIcon-unfold"></text>
+			</view>
+		</view>
+	</view>
+
+	<view class="AD">
+		<image src="/img/index_img1.png" mode="aspectFill"></image>
+	</view>
+
+	<view class="menuBox flex justify-between align-center">
+		<view wx:for="{{menuList}}" wx:key="index" class="item flex flex-direction text-center">
+			<image src="{{item.icon}}" mode="aspectFill"></image>
+			<text class="name">{{item.name}}</text>
+		</view>
+	</view>
+
+	<view class="dataBox bg-white br12">
+		<view class="sectionTitle">
+			运动数据
+		</view>
+		<view class="flex justify-between  px22">
+			<view class="item">
+				<view class="flex  align-center justify-between">
+					<image src="/img/index_img6.png" mode="aspectFill"></image>
+					<view class="data">
+						<text class="big">0</text>
+						<text>小时</text>
+					</view>
+				</view>
+				<view class="desc">
+					今日累计时长
+				</view>
+			</view>
+			<view class="item">
+				<view class="flex  align-center justify-between">
+					<image src="/img/index_img7.png" mode="aspectFill"></image>
+					<view class="data">
+						<text class="big">0</text>
+						<text>天</text>
+					</view>
+				</view>
+				<view class="desc">
+					累计运动天数
+				</view>
+			</view>
+			<view class="item">
+				<view class="flex  align-center justify-between">
+					<image src="/img/index_img8.png" mode="aspectFill"></image>
+					<view class="data">
+						<text class="big">0</text>
+						<text>小时</text>
+					</view>
+				</view>
+				<view class="desc">
+					累计运动时长
+				</view>
+			</view>
+		</view>
+	</view>
+
+	<view class="shopList bg-white br12">
+		<view class="sectionTitle flex align-center justify-between">
+			<text>附近门店</text>
+			<view class="btn text-center">全部门店</view>
+		</view>
+		<view  wx:for="{{shopList}}" wx:key="index" class="item">
+			<image class="bg" src="{{item.bg}}" mode="aspectFill"></image>
+			<view class="content text-white">
+				<view class="name">{{item.name}}</view>
+				<view class="location flex align-center justify-between">
+					<view>
+						<text class="cuIcon-location"></text>
+						{{item.location}}
+					</view>
+					<view class="km">{{item.km}}</view>
+				</view>
+			</view>
+		</view>
+	</view>
+
+  <view class="hotTopic bg-white br12">
+		<view class="sectionTitle flex align-center justify-between">
+			<text>热门话题</text>
+			<view class="btn text-center">查看全部</view>
+		</view>
+    <scroll-view class="sv" scroll-x="{{true}}" >
+      <view  wx:for="{{hotTopic}}" wx:key="index" class="item">
+        <image src="{{item.bg}}" mode="aspectFill" ></image>
+        <view class="title text-white text-blod">{{item.title}}</view>
+      </view> 
+    </scroll-view>
+	</view>
+
+  <view class="tabBar  bg-white">
+		<image class="tab3" src="/img/tab3.png" mode="aspectFill" ></image>
+
+    <view class="flex justify-around align-center">
+      <view class="item flex flex-direction justify-between align-center">
+        <image class="indexPic" src="/img/tab12.png"  mode="aspectFill"></image>
+        <view>首页</view>
+      </view>
+        <view class="item flex flex-direction justify-between align-center">
+        <image class="myPic" src="/img/tab21.png" mode="aspectFill"></image>
+        <view>我的</view>
+      </view>
+    </view>
+  </view>
+
+</view>

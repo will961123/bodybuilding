@@ -1,0 +1,35 @@
+<!--pages/courseList/courseList.wxml-->
+<view class="courseListView">
+	<view class="menuBox bg-white flex justify-around">
+		<view wx:for="{{menuList}}" wx:key="index" class="item flex flex-direction align-center justify-center">
+			<view class="icon flex align-center justify-center">
+				<image src="{{item.icon}}" style="width:{{item.width}}" mode="widthFix"></image>
+			</view>
+			<text>{{item.name}}</text>
+		</view>
+	</view>
+</view>
+
+
+<view class="listBox bg-white">
+	<view class="sectionTitle flex align-center justify-between">
+		<text>使用规则</text>
+		<view class="chooseLocation">
+			<text>选择门店</text>
+			<text class="cuIcon-unfold"></text>
+			<picker mode="region" bindchange="bindRegionChange"> 选择门店</picker>
+		</view>
+	</view>
+
+  <view bindtap="handlerItemClick" data-id="{{index}}" wx:for="{{list}}" wx:key="index"  class="item">
+    <image class="bg" src="{{item.bg}}" mode="aspectFill"  ></image>
+    <view class="info">
+      <view class="cName">{{item.cName}}</view>
+      <view class="flex aign-center">
+        <image class="head" src="{{item.head}}" mode="aspectFill" ></image>
+        <text>{{item.name}}</text>
+      </view>
+      <view class="price">￥{{item.price}}</view>
+    </view>
+  </view>
+</view>
