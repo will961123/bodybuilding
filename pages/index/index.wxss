@@ -236,6 +236,7 @@ page {
   position: fixed;
   left: 0;
   bottom: 0;
+box-shadow: 1px 3px 13px 0px rgba(216, 77, 72, 0.39);
 }
 .tabBar .item{
   height: 100rpx;
@@ -243,6 +244,9 @@ page {
   padding-bottom: 13rpx;
   font-size: 24rpx;
   color: #999; 
+}
+.tabBar .item.select {
+  color: #FF403E;
 }
 .tabBar .item.select{
   color: #FF403E;

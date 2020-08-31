@@ -6,17 +6,17 @@ Page({
   data: {
     menuList: [{
         name: '课程定制',
-        path: '',
+        path: '/pages/courseList/courseList',
         icon: '/img/index_img2.png'
       },
       {
         name: '教练专区',
-        path: '',
+        path: '/pages/coachList/coachList',
         icon: '/img/index_img3.png'
       },
       {
         name: '马上约课',
-        path: '',
+        path: '/pages/courseDetail/courseDetail',
         icon: '/img/index_img4.png'
       },
       {
@@ -49,5 +49,16 @@ Page({
     ]
   },
   onLoad: function () {},
-
+  navigator:function(e){
+    let url = e.currentTarget.dataset.url
+    wx.navigateTo({
+      url
+    })
+  },
+  redirect:function(e){ 
+    let url = e.currentTarget.dataset.url
+    wx.redirectTo({
+      url
+    })
+  }
 })

@@ -1,0 +1,6 @@
+<!--pages/feedBack/feedBack.wxml-->
+<view class="feedBackView">
+  <textarea placeholder="请输入问题" placeholder-style="color:#C0C0C0" ></textarea>
+
+  <button class="btn cu-btn" >提交</button>
+</view>

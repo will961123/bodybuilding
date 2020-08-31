@@ -1,4 +1,5 @@
 {
-  "usingComponents": {},"navigationBarTitleText": "卡包详情",
-    "navigationBarBackgroundColor": "#ffffff"
+  "usingComponents": {},
+  "navigationBarTitleText": "卡包详情",
+  "navigationBarBackgroundColor": "#ffffff"
 }

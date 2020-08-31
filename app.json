@@ -11,7 +11,11 @@
     "pages/courseList/courseList",
     "pages/courseDetail/courseDetail",
     "pages/shopList/shopList",
-    "pages/shopDetail/shopDetail"
+    "pages/shopDetail/shopDetail",
+    "pages/my/my",
+    "pages/cardList/cardList",
+    "pages/myAppointment/myAppointment",
+    "pages/feedBack/feedBack"
   ],
   "window": {
     "backgroundTextStyle": "light",

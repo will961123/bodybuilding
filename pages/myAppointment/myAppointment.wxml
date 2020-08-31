@@ -1,0 +1,22 @@
+<!--pages/myAppointment/myAppointment.wxml-->
+<view class="myAppointmentView">
+	<view class="typeList bg-white flex align-center justify-between">
+		<view bindtap="bindTypeChange" data-idx="{{index}}" wx:for="{{typeList}}" wx:key="index" class="{{nowType===index?'select':''}} item">
+			{{item}}
+		</view>
+	</view>
+
+  <view wx:for="{{list}}" wx:key="index" class="classItem flex align-center">
+  <image src="{{item.bg}}" mode="aspectFill" ></image>
+  <view  class="flex1">
+    <view class="cName">{{item.cName}}</view>
+    <view class="flex align-center justify-between">
+      <view class="flex align-center">
+        <image src="{{item.head}}" mode="aspectFill"  class="head"></image>
+        <view class="name">{{item.name}}</view>
+      </view>
+      <view class="type">{{item.type}}</view>
+    </view>
+  </view>
+  </view>
+</view>

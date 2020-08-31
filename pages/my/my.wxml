@@ -1,0 +1,63 @@
+<!--pages/my/my.wxml-->
+
+<view class="myView">
+	<view class="topBox">
+		<view class="userInfo flex align-center">
+			<image src="/img/my_img2.png" mode="aspectFill"></image>
+			<text class="name">昵称</text>
+			<text bindtap="navigator" data-url="/pages/personalCenter/personalCenter" class="cuIcon-edit"></text>
+		</view>
+		<view class="card ">
+			<image class="bg" src="/img/my_img3.png" mode="widthFix"></image>
+			<view class="cardDesc flex align-center justify-between">
+				<text>购买会员套餐，即可扫码健身</text>
+				<button>立即办理</button>
+			</view>
+		</view>
+	</view>
+
+
+	<view class="radianBox ">
+		<image class="bg" src="/img/my_img1.png" mode="widthFix"></image>
+		<view class="shadowBox s1 bg-white flex align-center">
+			<view class="item flex align-center justify-center">
+				<image src="/img/my_img4.png" mode="aspectFill"></image>
+				<view class="name">马上预约</view>
+			</view>
+			<view bindtap="navigator" data-url="/pages/myAppointment/myAppointment" class="item flex align-center justify-center">
+				<image class="w46" src="/img/my_img5.png" mode="aspectFill"></image>
+				<view class="name">我的预约</view>
+			</view>
+		</view>
+	</view>
+
+	<view class="shadowBox s2 bg-white  ">
+		<view class="sectionTitle flex align-center justify-between">
+			<text>我的服务</text>
+		</view>
+		<view class="flex align-center">
+			<view bindtap="navigator" data-url="{{item.path}}" wx:for="{{serverList}}" wx:key="index" class="item flex flex-direction align-center justify-between">
+				<image src="{{item.icon}}" mode="widthFix"></image>
+				<text>{{item.name}}</text>
+			</view>
+		</view>
+	</view>
+
+</view>
+
+<view class="tabBar  bg-white">
+	<image class="tab3" src="/img/tab3.png" mode="aspectFill"></image>
+
+	<view class="flex justify-around align-center">
+		<view bindtap="redirect" data-url="/pages/index/index"  class="item flex flex-direction justify-between align-center">
+			<image class="indexPic" src="/img/tab11.png" mode="aspectFill"></image>
+			<view>首页</view>
+		</view>
+		<view class="item select flex flex-direction justify-between align-center">
+			<image class="myPic" src="/img/tab22.png" mode="aspectFill"></image>
+			<view>我的</view>
+		</view>
+	</view>
+</view>
+
+<navigator></navigator>

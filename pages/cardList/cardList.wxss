@@ -1,0 +1,7 @@
+/* pages/cardList/cardList.wxss */
+page{
+   background-color: #fff;
+} 
+.card{
+  width: 100%;
+}

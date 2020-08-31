@@ -1,2 +1,84 @@
 <!--pages/shopDetail/shopDetail.wxml-->
-<text>pages/shopDetail/shopDetail.wxml</text>
+<view class="shopDetailView">
+	<image class="topBg" src="/img/shopDetail_img1.png" mode="widthFix"></image>
+	<view class="shopInfoBox bg-white">
+		<view class="name">{{shopDetail.name}}</view>
+		<view class="address flex justify-between">
+			<view>
+				<text class="cuIcon-location"></text>
+				<text>{{shopDetail.address}}</text>
+			</view>
+			<view class="km flex align-center">
+				<image mode="aspectFill" src="/img/shopList_img1.png"></image>
+				<text>{{shopDetail.km}}</text>
+			</view>
+		</view>
+		<view class="joinData">
+			<view class="num">
+				<image src="/img/shopDetail_img2.png" mode="aspectFill"></image>
+				<text>今日共{{shopDetail.joinData.tot}}人参与</text>
+			</view>
+			<view class="headBox">
+				<image wx:if="{{index<5}}" wx:for="{{shopDetail.joinData.list}}" wx:key="index" src="{{item}}" mode="aspectFill"></image>
+			</view>
+		</view>
+	</view>
+	<view class="section bg-white">
+		<view class="sectionTitle  bg-white flex align-center justify-between">
+			<view class="flex align-center">
+				<text>健身房详细信息</text>
+			</view>
+		</view>
+		<view class="desc">
+			{{shopDetail.detailText}}
+		</view>
+	</view>
+
+	<view class="section bg-white">
+		<view class="sectionTitle  bg-white flex align-center justify-between">
+			<view class="flex align-center">
+				<text>健身价格</text>
+			</view>
+		</view>
+		<view wx:for="{{shopDetail.priceText}}" wx:key="index" class="desc">
+			{{item}}
+		</view>
+	</view>
+
+	<view class="section bg-white">
+		<view class="sectionTitle  bg-white flex align-center justify-between">
+			<view class="flex align-center">
+				<text>场地简介</text>
+			</view>
+		</view>
+		<view class="desc desc2">
+			{{shopDetail.desc}}
+		</view>
+	</view>
+
+	<view class="calendarBox bg-white">
+		<view class="calendar flex align-center ">
+			<view wx:for="{{calendar}}" wx:key="index" class="item flex flex-direction align-center justify-center">
+				<view class="week">{{item.week}}</view>
+				<view class="day {{index===0?'select':''}}">{{item.day}}</view>
+			</view>
+		</view>
+    <view  wx:for="{{shopDetail.list}}" wx:key="index" class="coachItem">
+      <view class="time">
+        <text class="cuIcon-time"></text>
+        <text>18:00-19:00</text>
+      </view>
+      <view class="flex align-center justify-between">
+        <view class="flex align-center">
+          <image src="/img/shopDetail_img8.png" mode="aspectFill" ></image>
+          <view>
+            <view class="className">{{item.className}}</view>
+            <view class="name">教练：{{item.name}}</view>
+          </view>
+        </view>
+        <button class="btn cu-btn">立即预约</button>
+      </view>
+    </view>
+	</view>
+
+</view>

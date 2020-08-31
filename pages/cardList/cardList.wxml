@@ -1,0 +1,4 @@
+<!--pages/cardList/cardList.wxml-->
+<view class="cardListView">
+<image class="card" src="/img/cardDetail_img1.png" mode="widthFix"></image>
+</view>

@@ -16,7 +16,7 @@
 	</view>
 
 	<view class="menuBox flex justify-between align-center">
-		<view wx:for="{{menuList}}" wx:key="index" class="item flex flex-direction text-center">
+		<view bindtap="navigator" data-url="{{item.path}}" wx:for="{{menuList}}" wx:key="index" class="item flex flex-direction text-center">
 			<image src="{{item.icon}}" mode="aspectFill"></image>
 			<text class="name">{{item.name}}</text>
 		</view>
@@ -69,7 +69,7 @@
 	<view class="shopList bg-white br12">
 		<view class="sectionTitle flex align-center justify-between">
 			<text>附近门店</text>
-			<view class="btn text-center">全部门店</view>
+			<view bindtap="navigator" data-url="/pages/courseList/courseList" class="btn text-center">全部门店</view>
 		</view>
 		<view  wx:for="{{shopList}}" wx:key="index" class="item">
 			<image class="bg" src="{{item.bg}}" mode="aspectFill"></image>
@@ -103,11 +103,11 @@
 		<image class="tab3" src="/img/tab3.png" mode="aspectFill" ></image>
 
     <view class="flex justify-around align-center">
-      <view class="item flex flex-direction justify-between align-center">
+      <view   class="item select flex flex-direction justify-between align-center">
         <image class="indexPic" src="/img/tab12.png"  mode="aspectFill"></image>
         <view>首页</view>
       </view>
-        <view class="item flex flex-direction justify-between align-center">
+        <view bindtap="redirect" data-url="/pages/my/my" class="item flex flex-direction justify-between align-center">
         <image class="myPic" src="/img/tab21.png" mode="aspectFill"></image>
         <view>我的</view>
       </view>

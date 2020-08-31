@@ -133,6 +133,41 @@
 					"id": -1,
 					"name": "pages/shopList/shopList",
 					"pathName": "pages/shopList/shopList",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/shopDetail/shopDetail",
+					"pathName": "pages/shopDetail/shopDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/my/my",
+					"pathName": "pages/my/my",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/cardList/cardList",
+					"pathName": "pages/cardList/cardList",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/myAppointment/myAppointment",
+					"pathName": "pages/myAppointment/myAppointment",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/feedBack/feedBack",
+					"pathName": "pages/feedBack/feedBack",
 					"scene": null
 				}
 			]
